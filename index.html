@@ -484,6 +484,58 @@
     .wsq.y { background: #b59f3b; }
     .wsq.x { background: #3a3a3c; }
 
+        /* TV SHOWS */
+    .tv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      width: 100%;
+      max-width: 340px;
+      margin-top: 20px;
+    }
+    .tv-card {
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 2/3;
+      background: #1a1a1a;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .tv-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .tv-card-label {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 20px 8px 8px;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.3;
+      text-align: center;
+    }
+    .tv-card-fallback {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 32px;
+      padding: 8px;
+    }
+    .tv-card-fallback span {
+      font-size: 11px;
+      font-weight: 700;
+      text-align: center;
+      opacity: 0.8;
+      line-height: 1.3;
+    }
+
     /* PHOTO */
     .photo-frame { width:180px;height:180px;border-radius:20px;overflow:hidden;margin-bottom:22px;border:3px solid rgba(255,255,255,0.2);box-shadow:0 8px 40px rgba(0,0,0,0.4),0 0 0 1px rgba(255,255,255,0.05);flex-shrink:0; }
     .finale-photo { width:100%;height:100%;object-fit:cover;display:block; }
@@ -870,7 +922,60 @@
       </div>
     </section>
 
-    <!-- ── SLIDE 13: RELATIONSHIP GENRE ── -->
+     <section class="slide bg-dark">
+      <div class="blob" style="width:300px;height:300px;background:#FF6B9D;top:-80px;right:-60px;opacity:0.15;"></div>
+      <div class="blob" style="width:220px;height:220px;background:#FFA62B;bottom:-40px;left:-40px;opacity:0.15;"></div>
+      <div class="slide-inner">
+        <p class="eyebrow">Our watchlist</p>
+        <p class="stat-label">The shows we watched together</p>
+        <div class="tv-grid">
+ 
+          <!-- 30 Rock -->
+          <div class="tv-card">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BNzE5ODk5NjQxNV5BMl5BanBnXkFtZTcwNzI1MDM3Mg@@._V1_FMjpg_UX500_.jpg"
+              alt="30 Rock"
+              onerror="this.parentElement.innerHTML='<div class=\'tv-card-fallback\'>📺<span>30 Rock</span></div>';"
+            />
+            <div class="tv-card-label">30 Rock</div>
+          </div>
+ 
+          <!-- The Sopranos -->
+          <div class="tv-card">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BNjBlNjZjZDAtNTRlZS00ZGNhLTgwZTEtMzc5ZDQ0MDQ3ZmIwXkEyXkFqcGc@._V1_FMjpg_UX500_.jpg"
+              alt="The Sopranos"
+              onerror="this.parentElement.innerHTML='<div class=\'tv-card-fallback\'>🍝<span>The Sopranos</span></div>';"
+            />
+            <div class="tv-card-label">The Sopranos</div>
+          </div>
+ 
+          <!-- Curb Your Enthusiasm -->
+          <div class="tv-card">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BNDQzNzk0MTEtNTFkYy00MGY4LTllZTgtYWVjNThkMWQ5MWVlXkEyXkFqcGc@._V1_FMjpg_UX500_.jpg"
+              alt="Curb Your Enthusiasm"
+              onerror="this.parentElement.innerHTML='<div class=\'tv-card-fallback\'>😬<span>Curb Your Enthusiasm</span></div>';"
+            />
+            <div class="tv-card-label">Curb Your Enthusiasm</div>
+          </div>
+ 
+          <!-- Family Guy -->
+          <div class="tv-card">
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BZmE0MGJhNmYtMTcyNy00NTUyLWE2ODMtZDkwNjc4YWZiMWZiXkEyXkFqcGc@._V1_FMjpg_UX500_.jpg"
+              alt="Family Guy"
+              onerror="this.parentElement.innerHTML='<div class=\'tv-card-fallback\'>🐶<span>Family Guy</span></div>';"
+            />
+            <div class="tv-card-label">Family Guy</div>
+          </div>
+ 
+        </div>
+        <p class="sub-label" style="margin-top:14px;">Comfort watches. Classics. Non-negotiables.</p>
+      </div>
+    </section>
+
+    <!-- ── SLIDE 14: RELATIONSHIP GENRE ── -->
     <section class="slide bg-purple">
       <div class="blob" style="width:300px;height:300px;background:#1DB954;bottom:-80px;left:-60px;"></div>
       <div class="slide-inner">
@@ -882,7 +987,7 @@
       </div>
     </section>
 
-    <!-- ── SLIDE 14: FINALE ── -->
+    <!-- ── SLIDE 15: FINALE ── -->
     <section class="slide bg-green">
       <div class="blob" style="width:400px;height:400px;background:#9B5DE5;top:-120px;left:-80px;opacity:0.3;"></div>
       <div class="blob" style="width:250px;height:250px;background:#FF6B9D;bottom:-60px;right:-40px;opacity:0.35;"></div>
@@ -925,7 +1030,7 @@
      e.g. src="song.mp3" if the file is in your repo
 ═══════════════════════════════════════ -->
 <audio id="bg-audio" loop preload="auto">
-  <source src="zeppelin.mp3" type="audio/mpeg">
+  <source src="https://res.cloudinary.com/whopssyh/video/upload/v1783358344/zeppelin_e5ei3q.mp3" type="audio/mpeg">
 </audio>
 
 <script>
